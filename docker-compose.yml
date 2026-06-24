@@ -1,0 +1,18 @@
+services:
+  db:
+    image: postgres:17
+    container_name: postgres_db
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      # host_port:container_port
+      - "5432:5432"
+
+    volumes:
+      - volume_name:/var/lib/postgresql/data
+
+volumes:
+  volume_name:
+      
