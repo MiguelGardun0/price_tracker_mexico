@@ -24,7 +24,7 @@ def scrape_product_meli(url):
                 'product_price': price, 
                 'product_availability': (False if availability == 'https://schema.org/OutOfStock' else True), 
                 'offer_valid_until': valid_until, 
-                "marketplace": "Mercado Libre", 
+                "marketplace": "MercadoLibre", 
                 "url": url }
 
     elif response.status_code == 403:
